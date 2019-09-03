@@ -9,10 +9,12 @@ exports.up = function(knex) {
 
     users.string("password", 128).notNullable;
 
-    users.string("img", 128);
-    defaultTo(
-      "https://cdn2.iconfinder.com/data/icons/user-icon-2-1/100/user_5-15-512.png"
-    ).notNullable();
+    users
+      .string("img", 128)
+      .defaultTo(
+        "https://cdn2.iconfinder.com/data/icons/user-icon-2-1/100/user_5-15-512.png"
+      )
+      .notNullable();
   });
 };
 

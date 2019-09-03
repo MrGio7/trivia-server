@@ -47,6 +47,21 @@ router.post("/login", (req, res) => {
     });
 });
 
+router.get("/user", restricted, (req, res) => {
+  const id = req.userBody.id;
+
+  db("users")
+    .where({ id })
+    .first()
+    .then(user => {
+      res.status(201).json(req.userBody);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 function generateToken(user) {
   const payload = {
     id: user.id,

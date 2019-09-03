@@ -3,6 +3,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const usersRouter = require("./api/Users.js");
+const scoreRouter = require("./api/Score.js");
 
 const server = express();
 
@@ -11,6 +12,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api/users", usersRouter);
+server.use("/api/score", scoreRouter);
 
 server.get("/", (req, res) => {
   res.send("server is up");

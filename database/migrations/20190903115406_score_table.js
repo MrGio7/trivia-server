@@ -5,7 +5,6 @@ exports.up = function(knex) {
     score
       .integer("score")
       .notNullable()
-      .defaultTo(0);
 
     score
       .integer("id_user")

@@ -65,7 +65,8 @@ router.get("/user", restricted, (req, res) => {
 function generateToken(user) {
   const payload = {
     id: user.id,
-    user: user.username
+    user: user.username,
+    img: user.img
   };
 
   const options = {

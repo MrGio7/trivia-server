@@ -10,7 +10,7 @@
     "gitignore": "^0.6.0",
     "helmet": "^3.20.1",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.19.3",
+    "knex": "^0.19.5",
     "nodemon": "^1.19.1",
     "sqlite3": "^4.1.0"
   },
